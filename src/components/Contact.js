@@ -12,7 +12,10 @@ export default function Contact() {
           and across India.
         </p>
         <p className="contact__detail">
-          <a href="tel:+919810675681">Call: 9810675681</a>
+          Call:{" "}
+          <a href="tel:+919810675681">+91-9810675681</a>
+          {", "}
+          <a href="tel:+919899706331">+91-9899706331</a>
         </p>
         <p className="contact__detail">
           <a href="mailto:info@lawyalhr.com">Email: info@lawyalhr.com</a>

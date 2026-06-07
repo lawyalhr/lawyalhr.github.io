@@ -72,6 +72,8 @@ export default function Footer() {
         <li>
           <IconPhone />
           <a href="tel:+919810675681">+91 98106 75681</a>
+          {", "}
+          <a href="tel:+919899706331">+91 98997 06331</a>
         </li>
         <li>
           <IconPin />
