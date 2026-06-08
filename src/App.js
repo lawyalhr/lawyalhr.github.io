@@ -15,7 +15,7 @@ export default function App() {
     <div className="site">
       <Masthead />
       <Navbar />
-      <main className="main">
+      <main className="main" id="main-content">
         <div className="section-band section-band--hero-pair">
           <Hero />
         </div>

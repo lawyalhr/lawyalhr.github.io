@@ -6,6 +6,23 @@
   box-sizing: border-box;
 }
 
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 10000;
+  padding: 0.65rem 1rem;
+  border-radius: 0.35rem;
+  background: var(--brand-navy);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
 /* Brand (mockup): navy #002147, gold #b8860b, masthead cream */
 :root {
   --brand-navy: #002147;

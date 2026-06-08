@@ -54,7 +54,7 @@ function IconPin() {
 
 export default function Footer() {
   return (
-    <footer className="site-footer site-footer--brand" id="contact" role="contentinfo">
+    <footer className="site-footer site-footer--brand" role="contentinfo">
       <p className="site-footer__tagline">
         PRACTICAL ADVICE. LEGAL EXCELLENCE. LASTING IMPACT.
       </p>

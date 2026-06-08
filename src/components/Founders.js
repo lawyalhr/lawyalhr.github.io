@@ -11,7 +11,7 @@ function FounderCard({ name, role, photo, children }) {
         <div className="founder-card__photo-wrap">
           <img
             src={photo}
-            alt={name}
+            alt={`${name}, ${role}`}
             className="founder-card__photo"
           />
         </div>
@@ -29,7 +29,14 @@ function FounderCard({ name, role, photo, children }) {
 
 export default function Founders() {
   return (
-    <div id="founders" className="mx-auto mt-6 w-full max-w-6xl px-0">
+    <section
+      className="section founders mx-auto mt-6 w-full max-w-6xl px-0"
+      id="founders"
+      aria-labelledby="founders-heading"
+    >
+      <h2 id="founders-heading" className="section__title section__title--center">
+        Our Team
+      </h2>
       <div className="grid w-full auto-rows-[1fr] grid-cols-1 items-stretch gap-6 sm:grid-cols-2 sm:gap-8">
         <FounderCard
           name="Prem Kohli"
@@ -62,6 +69,6 @@ export default function Founders() {
           <li>Trusted advisor in manufacturing; strong liaisoning with government authorities</li>
         </FounderCard>
       </div>
-    </div>
+    </section>
   );
 }

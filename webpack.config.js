@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const seo = require("./seo.config");
 
 module.exports = (env, argv) => {
   const isProd = argv.mode === "production";
@@ -41,7 +42,8 @@ module.exports = (env, argv) => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: "./public/index.html"
+        template: "./public/index.html",
+        templateParameters: seo
       }),
       new CopyWebpackPlugin({
         patterns: [
@@ -53,6 +55,14 @@ module.exports = (env, argv) => {
             from: path.join(__dirname, "public", "images"),
             to: "images",
             noErrorOnMissing: true
+          },
+          {
+            from: path.join(__dirname, "public", "robots.txt"),
+            to: "."
+          },
+          {
+            from: path.join(__dirname, "public", "sitemap.xml"),
+            to: "."
           }
         ]
       })

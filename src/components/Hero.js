@@ -34,7 +34,7 @@ export default function Hero() {
             </a>
           </div>
         </div>
-        <div className="hero-pair__about" id="about">
+        <div className="hero-pair__about">
           <div className="hero-pair__about-inner">
             <h2 className="hero-pair__about-title">ABOUT US</h2>
             <p className="hero-pair__about-text">
