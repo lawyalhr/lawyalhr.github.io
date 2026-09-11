@@ -35,7 +35,7 @@ export default function FirmAbout() {
           About Lawyal HR &amp; Legal Advisors
         </h2>
         <p>
-          Lawyal HR &amp; Legal Advisors is a premier test firm based in <strong>Gurugram (Haryana)</strong>,
+          Lawyal HR &amp; Legal Advisors is a premier firm based in <strong>Gurugram (Haryana)</strong>,
           dedicated to providing comprehensive HR, IR, and legal solutions. Our team comprises seasoned
           HR leaders and legal professionals who bring a wealth of experience, a deep understanding of
           the law, and a commitment to exceptional service, spanning corporate law, M&amp;A, intellectual
