@@ -54,6 +54,16 @@ module.exports = (env, argv) => {
           {
             from: path.join(__dirname, "public", "images"),
             to: "images",
+            globOptions: {
+              ignore: [
+                "**/founder-deepak-anand.png",
+                "**/hero-corporate-meeting.jpeg",
+                "**/hero-placard-bg.png",
+                "**/logo-source.jpeg",
+                "**/logo.png",
+                "**/masthead-value-*.png"
+              ]
+            },
             noErrorOnMissing: true
           },
           {

@@ -84,6 +84,33 @@ a:hover {
   color: var(--accent);
 }
 
+.faq__list {
+  width: min(52rem, 100%);
+  margin: 2rem auto 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.faq__item {
+  border: 1px solid #dbe3ee;
+  border-radius: 0.65rem;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
+}
+
+.faq__item summary {
+  padding: 1rem 1.25rem;
+  color: #0f172a;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.faq__item p {
+  margin: 0;
+  padding: 0 1.25rem 1.15rem;
+  color: #475569;
+}
+
 .site {
   min-height: 100vh;
   display: flex;

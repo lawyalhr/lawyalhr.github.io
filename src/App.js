@@ -7,6 +7,7 @@ import OurExpertise from "./components/OurExpertise";
 import Services from "./components/Services";
 import ValueProps from "./components/ValueProps";
 import Founders from "./components/Founders";
+import Faq from "./components/Faq";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -33,6 +34,9 @@ export default function App() {
         </div>
         <div className="section-band section-band--light">
           <Founders />
+        </div>
+        <div className="section-band section-band--white">
+          <Faq />
         </div>
         <div className="section-band section-band--dark-cta">
           <Contact />

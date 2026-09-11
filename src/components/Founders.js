@@ -1,6 +1,6 @@
 import React from "react";
 
-function FounderCard({ name, role, photo, children }) {
+function FounderCard({ name, role, photo, photoWidth, photoHeight, children }) {
   return (
     <article className="relative flex h-full w-full min-h-0 flex-col self-stretch overflow-hidden rounded-xl border border-slate-200 bg-white p-6 shadow-sm ring-1 ring-slate-200/60 transition duration-300 hover:border-sky-300/80 hover:shadow-md sm:rounded-2xl sm:p-8">
       <div
@@ -13,6 +13,10 @@ function FounderCard({ name, role, photo, children }) {
             src={photo}
             alt={`${name}, ${role}`}
             className="founder-card__photo"
+            width={photoWidth}
+            height={photoHeight}
+            loading="lazy"
+            decoding="async"
           />
         </div>
         <h3 className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl">{name}</h3>
@@ -42,6 +46,8 @@ export default function Founders() {
           name="Prem Kohli"
           role="Global HR Leader & Strategic Advisor"
           photo="images/founder-prem-kohli.jpeg"
+          photoWidth="341"
+          photoHeight="345"
         >
           <li>30+ years in HR leadership, culture building & industrial relations</li>
           <li>Corporate CHRO – EssilorLuxottica (Luxottica & Ray-Ban India)</li>
@@ -56,7 +62,9 @@ export default function Founders() {
         <FounderCard
           name="Anand Deepak"
           role="Senior HR & IR Advisor"
-          photo="images/founder-deepak-anand.png"
+          photo="images/founder-deepak-anand.webp"
+          photoWidth="360"
+          photoHeight="403"
         >
           <li>30+ years of leadership in HR, industrial relations & compliance</li>
           <li>

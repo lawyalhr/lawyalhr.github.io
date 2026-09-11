@@ -3,10 +3,9 @@ const SITE_URL = "https://lawyalhr.com";
 const seo = {
   siteUrl: SITE_URL,
   siteName: "Lawyal HR & Legal Advisors",
-  title:
-    "Lawyal HR & Legal Advisors | HR, IR & Labour Law Consultants in Gurugram",
+  title: "HR & Labour Law Consultants in Gurugram | Lawyal",
   description:
-    "Premier HR, industrial relations and labour law advisory in Gurugram and pan-India. New Labour Codes implementation, statutory compliance audits, domestic enquiry, union negotiations, POSH compliance and tribunal representation by advisors with 30+ years of leadership experience.",
+    "HR, industrial relations and labour law consultants in Gurugram serving clients across India. Compliance, enquiries, POSH and union advisory.",
   keywords: [
     "HR advisory Gurugram",
     "HR advisory Gurgaon",
@@ -25,7 +24,17 @@ const seo = {
     "HR consultants Delhi NCR",
     "HR consultants Delhi",
     "HR consultants Gurgaon",
-    "labour law litigation India"
+    "labour law litigation India",
+    "HR & Labour Law Consultants in Gurugram",
+    "HR & Labour Law Consultants in Delhi",
+    "HR & Labour Law Consultants in NCR",
+    "HR & Labour Law Consultants in India",
+    "HR & Labour Law Consultants in Delhi NCR",
+    "HR & Labour Law Consultants in Gurugram",
+    "HR & Labour Law Consultants in Delhi",
+    "HR & Labour Law Consultants in NCR",
+    "HR & Labour Law Consultants in India",
+    
   ].join(", "),
   locale: "en_IN",
   themeColor: "#002147",
@@ -64,7 +73,10 @@ seo.structuredData = JSON.stringify({
       name: seo.siteName,
       url: SITE_URL,
       logo: `${SITE_URL}/images/logo-lawyal-full.png`,
-      image: `${SITE_URL}/images/hero-corporate-meeting.webp`,
+      image: [
+        `${SITE_URL}/images/logo-lawyal-full.png`,
+        `${SITE_URL}/images/hero-corporate-meeting.webp`
+      ],
       description: seo.description,
       email: seo.email,
       telephone: seo.phones,
@@ -78,13 +90,37 @@ seo.structuredData = JSON.stringify({
         "@type": "Country",
         name: "India"
       },
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: seo.phones[0],
+        email: seo.email,
+        contactType: "customer service",
+        areaServed: "IN",
+        availableLanguage: ["English", "Hindi"]
+      },
+      knowsAbout: [
+        "Human resources consulting",
+        "Industrial relations",
+        "Indian labour law",
+        "Statutory compliance",
+        "Workplace investigations",
+        "POSH compliance"
+      ],
       serviceType: seo.services,
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "HR, industrial relations and labour law services",
+        itemListElement: seo.services.map((service) => ({
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: service, areaServed: "India" }
+        }))
+      },
       founder: seo.founders.map((founder) => ({
         "@type": "Person",
         name: founder.name,
         jobTitle: founder.role
       })),
-      sameAs: [SITE_URL]
+      slogan: "HR Solutions. Legally Strong."
     },
     {
       "@type": "WebSite",
@@ -104,6 +140,44 @@ seo.structuredData = JSON.stringify({
       isPartOf: { "@id": `${SITE_URL}/#website` },
       about: { "@id": `${SITE_URL}/#organization` },
       inLanguage: "en-IN"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${SITE_URL}/#faq`,
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "What HR and labour law services does Lawyal provide?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Lawyal advises employers on HR policies, industrial relations, statutory compliance, domestic enquiries, POSH, union negotiations, labour disputes, training and compliance audits."
+          }
+        },
+        {
+          "@type": "Question",
+          name: "Where does Lawyal provide HR and labour law consulting?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Lawyal is based in Gurugram, serves Delhi NCR and supports organisations across India."
+          }
+        },
+        {
+          "@type": "Question",
+          name: "Can Lawyal support a domestic enquiry or industrial relations crisis?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. The firm undertakes domestic enquiry assignments and provides industrial relations support for disciplinary matters, union disputes, collective bargaining and crisis intervention."
+          }
+        },
+        {
+          "@type": "Question",
+          name: "Does Lawyal offer ongoing advisory as well as project work?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Clients can engage Lawyal on a monthly retainer or for a defined project such as a compliance audit, policy review, training programme or enquiry."
+          }
+        }
+      ]
     }
   ]
 });
